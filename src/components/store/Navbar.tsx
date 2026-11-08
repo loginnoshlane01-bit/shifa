@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Search, Compass, Package, Palette } from 'lucide-react';
+import { ShoppingBag, Search, Compass, Package, Palette, ShieldCheck } from 'lucide-react';
 import { useStore } from '../../context/StoreContext';
 import { Currency } from '../../types/store';
 
@@ -98,6 +98,14 @@ export const Navbar: React.FC = () => {
           >
             <Package className="w-3.5 h-3.5 text-[#C9A24B]" />
             <span>Track Order</span>
+          </button>
+          <button
+            onClick={() => setViewMode('admin')}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1F4D3A] text-white hover:bg-[#1F4D3A]/90 transition-all whitespace-nowrap shrink-0 cursor-pointer text-xs font-semibold shadow-xs"
+            title="Open E-Commerce Admin Console"
+          >
+            <ShieldCheck className="w-3.5 h-3.5 text-[#C9A24B]" />
+            <span>Admin Panel</span>
           </button>
           <button
             onClick={() => setViewMode('logo-studio')}

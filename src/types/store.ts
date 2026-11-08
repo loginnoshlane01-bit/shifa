@@ -38,6 +38,8 @@ export interface OrderCustomer {
   paymentMethod: 'cod' | 'bank_transfer' | 'card';
 }
 
+export type OrderStatus = 'confirmed' | 'tailoring' | 'inspected' | 'dispatched' | 'delivered';
+
 export interface Order {
   id: string;
   date: string;
@@ -47,9 +49,12 @@ export interface Order {
   shipping: number;
   total: number;
   currency: 'USD' | 'PKR' | 'AED';
-  status: 'confirmed' | 'tailoring' | 'inspected' | 'dispatched' | 'delivered';
+  status: OrderStatus;
   trackingNumber: string;
   estimatedDelivery: string;
+  assignedKarigar?: string;
 }
 
 export type Currency = 'USD' | 'PKR' | 'AED';
+
+export type AdminTab = 'dashboard' | 'orders' | 'products' | 'bespoke' | 'customers' | 'settings';
