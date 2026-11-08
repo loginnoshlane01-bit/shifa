@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --shifa-emerald: #1F4D3A;
+    --shifa-gold: #C9A24B;
+    --shifa-ivory: #FAF6EE;
+  }
+
+  body {
+    background-color: var(--shifa-ivory);
+    color: var(--shifa-emerald);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-brand-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-brand-sans {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
